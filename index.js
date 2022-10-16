@@ -2,13 +2,6 @@ const http = require("http");
 const fs = require("fs");
 const url = require("url");
 
-// const host = "172.125.161.7";
-// const port = 8080;
-
-// httpServer.listen(port, host, () => {
-//   console.log(`HTTP server running at http://${host}:${port}/`);
-// });
-
 const page404 = fs.readFileSync("404.html", "utf-8", (err, data) => {
   if (err) throw err;
   return data;
@@ -34,4 +27,4 @@ http
   })
   .listen(8080);
 
-console.log(`HTTP server running at http://$:${8080}/`);
+console.log(`HTTP server running at port 8080`);
